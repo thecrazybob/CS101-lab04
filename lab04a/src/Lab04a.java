@@ -1,5 +1,16 @@
 import java.util.Scanner;
 
+/**
+ * Lab04a 
+ * Instructions for Lab04a are in INSTRUCTIONS.md file located in the root directory of lab04a
+ * Revisions can be seen on the following GitHub URL: https://github.com/thecrazybob/CS101-lab04
+ * Style Guidelines: http://www.cs.bilkent.edu.tr/~david/cs101/practicalwork/2010/styleguidelines.htm
+ * Lab Page: http://www.cs.bilkent.edu.tr/~david/cs101/assignments/lab04/
+ * 
+ * @author Mohammed Sohail
+ * @version 22/11/2020
+ */ 
+
 public class Lab04a {
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);

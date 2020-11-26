@@ -4,18 +4,21 @@ public class Lab04a {
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
 
+        // constants
+        final String newline = System.getProperty("line.separator");
+        
         // variables
-
         int user_given_n;
         int i;
         int values_printed_out;
-        String newline = System.getProperty("line.separator");
 
         // program code
 
         // Prompt for value;
         System.out.println("Please enter a number (must be positive):");
         user_given_n = scan.nextInt();
+
+        scan.close();
 
         // Print out an error message if the value is less than 0 / not positive
         if (user_given_n < 0) {

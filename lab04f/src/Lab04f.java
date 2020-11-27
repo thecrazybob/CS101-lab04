@@ -3,17 +3,17 @@ import java.io.PrintWriter;
 import java.io.IOException;
 
 /**
- * Lab04d 
- * Instructions for Lab04d are in INSTRUCTIONS.md file located in the root directory of lab04d
+ * Lab04f 
+ * Instructions for Lab04f are in INSTRUCTIONS.md file located in the root directory of lab04f
  * Revisions can be seen on the following GitHub URL: https://github.com/thecrazybob/CS101-lab04
  * Style Guidelines: http://www.cs.bilkent.edu.tr/~david/cs101/practicalwork/2010/styleguidelines.htm
  * Lab Page: http://www.cs.bilkent.edu.tr/~david/cs101/assignments/lab04/index2.html
  * 
  * @author Mohammed Sohail
- * @version 26/11/2020
+ * @version 27/11/2020
  */ 
 
-public class Lab04d {
+public class Lab04f {
     public static void main(String[] args) throws IOException {
         
         Scanner scan = new Scanner(System.in);
@@ -26,6 +26,7 @@ public class Lab04d {
         int min;
         int range;
         int value;
+        int line_number_for_print;
 
         // Prompt for filename
         System.out.println("Please provide the file name:");
@@ -34,6 +35,10 @@ public class Lab04d {
         // Prompt for number of values to be generated
         System.out.println("Please provide the number of values:");
         number_of_values = scan.nextInt();
+
+        // Prompt where "-1" should be printed
+        System.out.println("Please provide the line number for -1:");
+        line_number_for_print = scan.nextInt();
 
         // System.setOut( new PrintStream( filename + ".txt" ) );
         PrintWriter fout = new PrintWriter( filename + ".txt" );
@@ -48,11 +53,21 @@ public class Lab04d {
         // Loop and generate random values for "number_of_values" 
         while (i < number_of_values) {
             
-            // Calculate random value
-            value = (int) (Math.random() * range) + min;
+            if ((i+1) != line_number_for_print) {
 
-            // Save it in the file
-            fout.println(value);
+                // Calculate random value
+                value = (int) (Math.random() * range) + min;
+
+                // Save it in the file
+                fout.println(value);
+
+            }
+            else {
+
+                // Print -1 at line_number_for_print (provided by user)
+                fout.println(-1);
+
+            }
             
             i++;
         
